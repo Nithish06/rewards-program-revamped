@@ -1,38 +1,66 @@
-import { useEffect, useState } from 'react';
-import { fetchTransactions } from '../api/rewardsApi';
-import { calculateRewardPoints } from '../utils/rewardCalculator';
+import { useCallback, useEffect, useMemo, useState } from "react";
+import { fetchTransactions } from "../api/transactionsApi";
+import { calculateRewardPoints } from "../utils/rewardCalculator";
 import {
   aggregateMonthlyRewards,
   aggregateTotalRewards,
-} from '../utils/aggregationUtils';
+  getLatestThreeMonthsData
+} from "../utils/aggregationUtils";
+
+const minimumLoaderDelay = (ms = 2000) =>
+  new Promise(resolve => setTimeout(resolve, ms));
 
 export const useRewardsData = () => {
   const [transactions, setTransactions] = useState([]);
-  const [monthlyRewards, setMonthlyRewards] = useState([]);
-  const [totalRewards, setTotalRewards] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  useEffect(() => {
-    fetchTransactions()
-      .then((res) => {
-        const enriched = res.data
-          .map((txn) => ({
-            ...txn,
-            rewardPoints: calculateRewardPoints(txn.amount),
-          }))
-          .sort((a, b) => new Date(a.date) - new Date(b.date));
+  const fetchData = useCallback(async () => {
+    setLoading(true);
+    setError(null);
 
-        const monthly = aggregateMonthlyRewards(enriched);
-        const total = aggregateTotalRewards(monthly);
+    try {
+      const [data] = await Promise.all([
+        fetchTransactions(),
+        minimumLoaderDelay(3000)
+      ]);
 
-        setTransactions(enriched);
-        setMonthlyRewards(monthly);
-        setTotalRewards(total);
-      })
-      .catch(setError)
-      .finally(() => setLoading(false));
+      const enriched = data.map(txn => ({
+        ...txn,
+        rewardPoints: calculateRewardPoints(txn.amount)
+      }));
+
+      const latestThreeMonths =
+        getLatestThreeMonthsData(enriched);
+
+      setTransactions(latestThreeMonths);
+    } catch (err) {
+      setError(err.message);
+    } finally {
+      setLoading(false);
+    }
   }, []);
 
-  return { transactions, monthlyRewards, totalRewards, loading, error };
+  useEffect(() => {
+    fetchData();
+  }, [fetchData]);
+
+  const monthlyRewards = useMemo(
+    () => aggregateMonthlyRewards(transactions),
+    [transactions]
+  );
+
+  const totalRewards = useMemo(
+    () => aggregateTotalRewards(monthlyRewards),
+    [monthlyRewards]
+  );
+
+  return {
+    transactions,
+    monthlyRewards,
+    totalRewards,
+    loading,
+    error,
+    refetch: fetchData
+  };
 };

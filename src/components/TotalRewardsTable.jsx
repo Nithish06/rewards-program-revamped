@@ -1,9 +1,5 @@
-import PropTypes from 'prop-types';
-import React from 'react';
-
-const TotalRewardsTable = ({ data }) => (
-  <>
-    <h2>Total Rewards</h2>
+export default function TotalRewardsTable({ data }) {
+  return (
     <table>
       <thead>
         <tr>
@@ -12,19 +8,13 @@ const TotalRewardsTable = ({ data }) => (
         </tr>
       </thead>
       <tbody>
-        {data.map((item, index) => (
-          <tr key={index}>
-            <td>{item.customerName}</td>
-            <td>{item.points}</td>
+        {data.map(row => (
+          <tr key={row.customerName}>
+            <td>{row.customerName}</td>
+            <td>{row.points}</td>
           </tr>
         ))}
       </tbody>
     </table>
-  </>
-);
-
-TotalRewardsTable.propTypes = {
-  data: PropTypes.array.isRequired,
-};
-
-export default TotalRewardsTable;
+  );
+}

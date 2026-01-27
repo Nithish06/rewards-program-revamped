@@ -1,4 +1,8 @@
-export const calculateRewardPoints = (amount) => {
+/**
+ * @param {number} amount
+ * @returns {number}
+ */
+export const calculateRewardPoints = amount => {
   const value = Math.floor(amount);
 
   if (value <= 50) return 0;

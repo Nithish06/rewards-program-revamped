@@ -1,9 +1,27 @@
-import { getMonthYear } from './dateUtils';
+import { getMonthYearKey, getMonthYearLabel } from "./dateUtils";
 
-export const aggregateMonthlyRewards = (transactions) =>
+export const getLatestThreeMonthsData = transactions => {
+  const sorted = [...transactions].sort(
+    (a, b) => new Date(b.date) - new Date(a.date)
+  );
+
+  const monthKeys = [];
+
+  for (const txn of sorted) {
+    const key = getMonthYearKey(txn.date);
+    if (!monthKeys.includes(key)) monthKeys.push(key);
+    if (monthKeys.length === 3) break;
+  }
+
+  return sorted.filter(txn =>
+    monthKeys.includes(getMonthYearKey(txn.date))
+  );
+};
+
+export const aggregateMonthlyRewards = transactions =>
   Object.values(
     transactions.reduce((acc, txn) => {
-      const { month, year } = getMonthYear(txn.date);
+      const { month, year } = getMonthYearLabel(txn.date);
       const key = `${txn.customerId}-${month}-${year}`;
 
       if (!acc[key]) {
@@ -12,7 +30,7 @@ export const aggregateMonthlyRewards = (transactions) =>
           customerName: txn.customerName,
           month,
           year,
-          points: 0,
+          points: 0
         };
       }
 
@@ -21,16 +39,16 @@ export const aggregateMonthlyRewards = (transactions) =>
     }, {})
   );
 
-export const aggregateTotalRewards = (monthlyData) =>
+export const aggregateTotalRewards = monthly =>
   Object.values(
-    monthlyData.reduce((acc, item) => {
-      if (!acc[item.customerName]) {
-        acc[item.customerName] = {
-          customerName: item.customerName,
-          points: 0,
+    monthly.reduce((acc, row) => {
+      if (!acc[row.customerName]) {
+        acc[row.customerName] = {
+          customerName: row.customerName,
+          points: 0
         };
       }
-      acc[item.customerName].points += item.points;
+      acc[row.customerName].points += row.points;
       return acc;
     }, {})
   );
