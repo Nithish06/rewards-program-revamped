@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "customerId": "C1",
+    "customerName": "John Doe",
+    "product": "Shoes",
+    "amount": 120.5,
+    "date": "2023-12-15"
+  },
+  {
+    "id": 2,
+    "customerId": "C1",
+    "customerName": "John Doe",
+    "product": "Bag",
+    "amount": 75,
+    "date": "2024-01-10"
+  },
+  {
+    "id": 3,
+    "customerId": "C1",
+    "customerName": "John Doe",
+    "product": "Watch",
+    "amount": 200,
+    "date": "2024-02-05"
+  },
+  {
+    "id": 4,
+    "customerId": "C2",
+    "customerName": "Jane Smith",
+    "product": "Dress",
+    "amount": 90,
+    "date": "2024-01-20"
+  },
+  {
+    "id": 5,
+    "customerId": "C2",
+    "customerName": "Jane Smith",
+    "product": "Shoes",
+    "amount": 110,
+    "date": "2024-02-18"
+  }
+]
