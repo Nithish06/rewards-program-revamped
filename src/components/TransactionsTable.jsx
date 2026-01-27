@@ -83,42 +83,42 @@ export default function TransactionsTable({ data }) {
         </select>
       </div>
 
-      {/* ---------------- TABLE ---------------- */}
-      <table>
-        <thead>
-          <tr>
-            <th>ID</th>
-            <th>Customer</th>
-            <th>Date</th>
-            <th>Product</th>
-            <th>Amount</th>
-            <th>Points</th>
-          </tr>
-        </thead>
-
-        <tbody>
-          {paginatedData.map(txn => (
-            <tr key={txn.id}>
-              <td>{txn.id}</td>
-              <td>{txn.customerName}</td>
-              <td>{txn.date}</td>
-              <td>{txn.product}</td>
-              <td className="amount">${txn.amount}</td>
-              <td className="points">{txn.rewardPoints}</td>
-            </tr>
-          ))}
-
-          {paginatedData.length === 0 && (
+      <div className="table-wrapper">
+        <table>
+          <thead>
             <tr>
-              <td colSpan="6" className="empty">
-                No records found
-              </td>
+              <th>ID</th>
+              <th>Customer</th>
+              <th>Date</th>
+              <th>Product</th>
+              <th>Amount</th>
+              <th>Points</th>
             </tr>
-          )}
-        </tbody>
-      </table>
+          </thead>
 
-      {/* ---------------- PAGINATION ---------------- */}
+          <tbody>
+            {paginatedData.map(txn => (
+              <tr key={txn.id}>
+                <td>{txn.id}</td>
+                <td>{txn.customerName}</td>
+                <td>{txn.date}</td>
+                <td>{txn.product}</td>
+                <td className="amount">${txn.amount}</td>
+                <td className="points">{txn.rewardPoints}</td>
+              </tr>
+            ))}
+
+            {paginatedData.length === 0 && (
+              <tr>
+                <td colSpan="6" className="empty">
+                  No records found
+                </td>
+              </tr>
+            )}
+          </tbody>
+        </table>
+      </div>
+
       <Pagination
         page={page}
         pageSize={pageSize}

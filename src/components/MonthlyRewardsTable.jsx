@@ -1,5 +1,6 @@
 export default function MonthlyRewardsTable({ data }) {
   return (
+    <div className="table-wrapper">
     <table>
       <thead>
         <tr>
@@ -20,5 +21,6 @@ export default function MonthlyRewardsTable({ data }) {
         ))}
       </tbody>
     </table>
+    </div>
   );
 }

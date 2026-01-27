@@ -1,5 +1,6 @@
 export default function TotalRewardsTable({ data }) {
   return (
+    <div className="table-wrapper">
     <table>
       <thead>
         <tr>
@@ -16,5 +17,6 @@ export default function TotalRewardsTable({ data }) {
         ))}
       </tbody>
     </table>
+    </div>
   );
 }
