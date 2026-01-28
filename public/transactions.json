@@ -1,63 +1,562 @@
 [
-    { "id": "tx1", "customerId": "C1", "customerName": "John", "product": "Shoes", "amount": 120, "date": "2022-01-15" },
-    { "id": "tx2", "customerId": "C1", "customerName": "John", "product": "Bag", "amount": 90, "date": "2022-02-18" },
-    { "id": "tx3", "customerId": "C2", "customerName": "Jane", "product": "Dress", "amount": 180, "date": "2022-03-21" },
-    { "id": "tx4", "customerId": "C3", "customerName": "Alex", "product": "Watch", "amount": 220, "date": "2022-04-05" },
-  
-    { "id": "tx5", "customerId": "C1", "customerName": "John", "product": "Shoes", "amount": 140, "date": "2022-05-11" },
-    { "id": "tx6", "customerId": "C2", "customerName": "Jane", "product": "Bag", "amount": 75, "date": "2022-06-14" },
-    { "id": "tx7", "customerId": "C3", "customerName": "Alex", "product": "Laptop", "amount": 350, "date": "2022-07-20" },
-    { "id": "tx8", "customerId": "C4", "customerName": "Emma", "product": "Shoes", "amount": 95, "date": "2022-08-17" },
-  
-    { "id": "tx9", "customerId": "C4", "customerName": "Emma", "product": "Bag", "amount": 110, "date": "2022-09-12" },
-    { "id": "tx10", "customerId": "C2", "customerName": "Jane", "product": "Dress", "amount": 200, "date": "2022-10-03" },
-  
-    { "id": "tx11", "customerId": "C1", "customerName": "John", "product": "Shoes", "amount": 160, "date": "2023-01-10" },
-    { "id": "tx12", "customerId": "C2", "customerName": "Jane", "product": "Bag", "amount": 60, "date": "2023-02-15" },
-    { "id": "tx13", "customerId": "C3", "customerName": "Alex", "product": "Phone", "amount": 500, "date": "2023-03-01" },
-    { "id": "tx14", "customerId": "C4", "customerName": "Emma", "product": "Shoes", "amount": 130, "date": "2023-04-19" },
-    { "id": "tx15", "customerId": "C1", "customerName": "John", "product": "Watch", "amount": 210, "date": "2023-05-25" },
-  
-    { "id": "tx16", "customerId": "C2", "customerName": "Jane", "product": "Shoes", "amount": 145, "date": "2023-06-12" },
-    { "id": "tx17", "customerId": "C3", "customerName": "Alex", "product": "Bag", "amount": 80, "date": "2023-07-18" },
-    { "id": "tx18", "customerId": "C4", "customerName": "Emma", "product": "Laptop", "amount": 700, "date": "2023-08-09" },
-    { "id": "tx19", "customerId": "C1", "customerName": "John", "product": "Shoes", "amount": 155, "date": "2023-09-21" },
-    { "id": "tx20", "customerId": "C2", "customerName": "Jane", "product": "Dress", "amount": 95, "date": "2023-10-13" },
-  
-    { "id": "tx21", "customerId": "C3", "customerName": "Alex", "product": "Shoes", "amount": 175, "date": "2024-01-05" },
-    { "id": "tx22", "customerId": "C4", "customerName": "Emma", "product": "Bag", "amount": 120, "date": "2024-01-20" },
-    { "id": "tx23", "customerId": "C1", "customerName": "John", "product": "Laptop", "amount": 900, "date": "2024-02-01" },
-    { "id": "tx24", "customerId": "C2", "customerName": "Jane", "product": "Shoes", "amount": 135, "date": "2024-02-11" },
-    { "id": "tx25", "customerId": "C3", "customerName": "Alex", "product": "Watch", "amount": 260, "date": "2024-03-02" },
-  
-    { "id": "tx26", "customerId": "C4", "customerName": "Emma", "product": "Shoes", "amount": 145, "date": "2024-03-18" },
-    { "id": "tx27", "customerId": "C1", "customerName": "John", "product": "Bag", "amount": 110, "date": "2024-04-07" },
-    { "id": "tx28", "customerId": "C2", "customerName": "Jane", "product": "Dress", "amount": 190, "date": "2024-04-15" },
-    { "id": "tx29", "customerId": "C3", "customerName": "Alex", "product": "Shoes", "amount": 165, "date": "2024-05-06" },
-    { "id": "tx30", "customerId": "C4", "customerName": "Emma", "product": "Bag", "amount": 85, "date": "2024-05-22" },
-  
-    { "id": "tx31", "customerId": "C1", "customerName": "John", "product": "Shoes", "amount": 140, "date": "2024-06-03" },
-    { "id": "tx32", "customerId": "C2", "customerName": "Jane", "product": "Laptop", "amount": 850, "date": "2024-06-17" },
-    { "id": "tx33", "customerId": "C3", "customerName": "Alex", "product": "Watch", "amount": 300, "date": "2024-07-08" },
-    { "id": "tx34", "customerId": "C4", "customerName": "Emma", "product": "Shoes", "amount": 155, "date": "2024-07-19" },
-    { "id": "tx35", "customerId": "C1", "customerName": "John", "product": "Bag", "amount": 95, "date": "2024-08-01" },
-  
-    { "id": "tx36", "customerId": "C2", "customerName": "Jane", "product": "Shoes", "amount": 165, "date": "2024-08-14" },
-    { "id": "tx37", "customerId": "C3", "customerName": "Alex", "product": "Phone", "amount": 600, "date": "2024-09-09" },
-    { "id": "tx38", "customerId": "C4", "customerName": "Emma", "product": "Dress", "amount": 210, "date": "2024-09-28" },
-  
-    { "id": "tx39", "customerId": "C1", "customerName": "John", "product": "Shoes", "amount": 175, "date": "2024-10-11" },
-    { "id": "tx40", "customerId": "C2", "customerName": "Jane", "product": "Bag", "amount": 120, "date": "2024-10-19" },
-  
-    { "id": "tx41", "customerId": "C3", "customerName": "Alex", "product": "Laptop", "amount": 1100, "date": "2025-01-05" },
-    { "id": "tx42", "customerId": "C4", "customerName": "Emma", "product": "Shoes", "amount": 180, "date": "2025-01-20" },
-    { "id": "tx43", "customerId": "C1", "customerName": "John", "product": "Bag", "amount": 130, "date": "2025-02-03" },
-    { "id": "tx44", "customerId": "C2", "customerName": "Jane", "product": "Dress", "amount": 220, "date": "2025-02-11" },
-    { "id": "tx45", "customerId": "C3", "customerName": "Alex", "product": "Shoes", "amount": 195, "date": "2025-03-07" },
-    { "id": "tx46", "customerId": "C4", "customerName": "Emma", "product": "Watch", "amount": 260, "date": "2025-03-15" },
-    { "id": "tx47", "customerId": "C1", "customerName": "John", "product": "Laptop", "amount": 980, "date": "2025-04-01" },
-    { "id": "tx48", "customerId": "C2", "customerName": "Jane", "product": "Shoes", "amount": 170, "date": "2025-04-12" },
-    { "id": "tx49", "customerId": "C3", "customerName": "Alex", "product": "Bag", "amount": 110, "date": "2025-05-04" },
-    { "id": "tx50", "customerId": "C4", "customerName": "Emma", "product": "Dress", "amount": 240, "date": "2025-05-18" }
-  ]
-  
+  {
+    "id": "tx001",
+    "customerId": "C001",
+    "customerName": "John Miller",
+    "product": "Shoes",
+    "amount": 120,
+    "date": "2022-01-10"
+  },
+  {
+    "id": "tx002",
+    "customerId": "C002",
+    "customerName": "Emma Wilson",
+    "product": "Bag",
+    "amount": 95,
+    "date": "2022-01-15"
+  },
+  {
+    "id": "tx003",
+    "customerId": "C003",
+    "customerName": "David Brown",
+    "product": "Watch",
+    "amount": 220,
+    "date": "2022-02-03"
+  },
+  {
+    "id": "tx004",
+    "customerId": "C004",
+    "customerName": "Sophia Taylor",
+    "product": "Shoes",
+    "amount": 135,
+    "date": "2022-02-18"
+  },
+  {
+    "id": "tx005",
+    "customerId": "C005",
+    "customerName": "Daniel Anderson",
+    "product": "Laptop",
+    "amount": 850,
+    "date": "2022-03-01"
+  },
+  {
+    "id": "tx006",
+    "customerId": "C006",
+    "customerName": "Olivia Thomas",
+    "product": "Dress",
+    "amount": 175,
+    "date": "2022-03-12"
+  },
+  {
+    "id": "tx007",
+    "customerId": "C007",
+    "customerName": "James Martinez",
+    "product": "Shoes",
+    "amount": 160,
+    "date": "2022-04-04"
+  },
+  {
+    "id": "tx008",
+    "customerId": "C008",
+    "customerName": "Ava Harris",
+    "product": "Bag",
+    "amount": 70,
+    "date": "2022-04-19"
+  },
+  {
+    "id": "tx009",
+    "customerId": "C009",
+    "customerName": "Liam Clark",
+    "product": "Phone",
+    "amount": 600,
+    "date": "2022-05-07"
+  },
+  {
+    "id": "tx010",
+    "customerId": "C010",
+    "customerName": "Mia Lewis",
+    "product": "Shoes",
+    "amount": 140,
+    "date": "2022-05-22"
+  },
+  {
+    "id": "tx011",
+    "customerId": "C011",
+    "customerName": "Noah Walker",
+    "product": "Watch",
+    "amount": 260,
+    "date": "2022-06-11"
+  },
+  {
+    "id": "tx012",
+    "customerId": "C012",
+    "customerName": "Isabella Hall",
+    "product": "Bag",
+    "amount": 110,
+    "date": "2022-06-29"
+  },
+  {
+    "id": "tx013",
+    "customerId": "C001",
+    "customerName": "John Miller",
+    "product": "Shoes",
+    "amount": 180,
+    "date": "2022-07-08"
+  },
+  {
+    "id": "tx014",
+    "customerId": "C002",
+    "customerName": "Emma Wilson",
+    "product": "Dress",
+    "amount": 210,
+    "date": "2022-07-19"
+  },
+  {
+    "id": "tx015",
+    "customerId": "C003",
+    "customerName": "David Brown",
+    "product": "Bag",
+    "amount": 90,
+    "date": "2022-08-03"
+  },
+  {
+    "id": "tx016",
+    "customerId": "C004",
+    "customerName": "Sophia Taylor",
+    "product": "Shoes",
+    "amount": 155,
+    "date": "2022-08-21"
+  },
+  {
+    "id": "tx017",
+    "customerId": "C005",
+    "customerName": "Daniel Anderson",
+    "product": "Laptop",
+    "amount": 1200,
+    "date": "2022-09-05"
+  },
+  {
+    "id": "tx018",
+    "customerId": "C006",
+    "customerName": "Olivia Thomas",
+    "product": "Bag",
+    "amount": 130,
+    "date": "2022-09-16"
+  },
+  {
+    "id": "tx019",
+    "customerId": "C007",
+    "customerName": "James Martinez",
+    "product": "Shoes",
+    "amount": 165,
+    "date": "2022-10-10"
+  },
+  {
+    "id": "tx020",
+    "customerId": "C008",
+    "customerName": "Ava Harris",
+    "product": "Watch",
+    "amount": 240,
+    "date": "2022-10-25"
+  },
+  {
+    "id": "tx021",
+    "customerId": "C009",
+    "customerName": "Liam Clark",
+    "product": "Laptop",
+    "amount": 950,
+    "date": "2022-11-06"
+  },
+  {
+    "id": "tx022",
+    "customerId": "C010",
+    "customerName": "Mia Lewis",
+    "product": "Shoes",
+    "amount": 170,
+    "date": "2022-11-22"
+  },
+  {
+    "id": "tx023",
+    "customerId": "C011",
+    "customerName": "Noah Walker",
+    "product": "Bag",
+    "amount": 125,
+    "date": "2022-12-05"
+  },
+  {
+    "id": "tx024",
+    "customerId": "C012",
+    "customerName": "Isabella Hall",
+    "product": "Dress",
+    "amount": 195,
+    "date": "2022-12-19"
+  },
+  {
+    "id": "tx025",
+    "customerId": "C001",
+    "customerName": "John Miller",
+    "product": "Shoes",
+    "amount": 160,
+    "date": "2023-01-08"
+  },
+  {
+    "id": "tx026",
+    "customerId": "C002",
+    "customerName": "Emma Wilson",
+    "product": "Bag",
+    "amount": 100,
+    "date": "2023-01-21"
+  },
+  {
+    "id": "tx027",
+    "customerId": "C003",
+    "customerName": "David Brown",
+    "product": "Watch",
+    "amount": 280,
+    "date": "2023-02-14"
+  },
+  {
+    "id": "tx028",
+    "customerId": "C004",
+    "customerName": "Sophia Taylor",
+    "product": "Shoes",
+    "amount": 145,
+    "date": "2023-02-27"
+  },
+  {
+    "id": "tx029",
+    "customerId": "C005",
+    "customerName": "Daniel Anderson",
+    "product": "Laptop",
+    "amount": 1100,
+    "date": "2023-03-09"
+  },
+  {
+    "id": "tx030",
+    "customerId": "C006",
+    "customerName": "Olivia Thomas",
+    "product": "Dress",
+    "amount": 185,
+    "date": "2023-03-22"
+  },
+  {
+    "id": "tx031",
+    "customerId": "C007",
+    "customerName": "James Martinez",
+    "product": "Shoes",
+    "amount": 175,
+    "date": "2023-04-06"
+  },
+  {
+    "id": "tx032",
+    "customerId": "C008",
+    "customerName": "Ava Harris",
+    "product": "Bag",
+    "amount": 90,
+    "date": "2023-04-20"
+  },
+  {
+    "id": "tx033",
+    "customerId": "C009",
+    "customerName": "Liam Clark",
+    "product": "Phone",
+    "amount": 650,
+    "date": "2023-05-11"
+  },
+  {
+    "id": "tx034",
+    "customerId": "C010",
+    "customerName": "Mia Lewis",
+    "product": "Shoes",
+    "amount": 155,
+    "date": "2023-05-26"
+  },
+  {
+    "id": "tx035",
+    "customerId": "C011",
+    "customerName": "Noah Walker",
+    "product": "Watch",
+    "amount": 300,
+    "date": "2023-06-15"
+  },
+  {
+    "id": "tx036",
+    "customerId": "C012",
+    "customerName": "Isabella Hall",
+    "product": "Bag",
+    "amount": 115,
+    "date": "2023-06-30"
+  },
+  {
+    "id": "tx037",
+    "customerId": "C001",
+    "customerName": "John Miller",
+    "product": "Shoes",
+    "amount": 190,
+    "date": "2023-07-12"
+  },
+  {
+    "id": "tx038",
+    "customerId": "C002",
+    "customerName": "Emma Wilson",
+    "product": "Dress",
+    "amount": 230,
+    "date": "2023-07-28"
+  },
+  {
+    "id": "tx039",
+    "customerId": "C003",
+    "customerName": "David Brown",
+    "product": "Bag",
+    "amount": 105,
+    "date": "2023-08-10"
+  },
+  {
+    "id": "tx040",
+    "customerId": "C004",
+    "customerName": "Sophia Taylor",
+    "product": "Shoes",
+    "amount": 170,
+    "date": "2023-08-24"
+  },
+  {
+    "id": "tx041",
+    "customerId": "C005",
+    "customerName": "Daniel Anderson",
+    "product": "Laptop",
+    "amount": 1300,
+    "date": "2023-09-04"
+  },
+  {
+    "id": "tx042",
+    "customerId": "C006",
+    "customerName": "Olivia Thomas",
+    "product": "Bag",
+    "amount": 140,
+    "date": "2023-09-18"
+  },
+  {
+    "id": "tx043",
+    "customerId": "C007",
+    "customerName": "James Martinez",
+    "product": "Shoes",
+    "amount": 185,
+    "date": "2023-10-09"
+  },
+  {
+    "id": "tx044",
+    "customerId": "C008",
+    "customerName": "Ava Harris",
+    "product": "Watch",
+    "amount": 260,
+    "date": "2023-10-23"
+  },
+  {
+    "id": "tx045",
+    "customerId": "C009",
+    "customerName": "Liam Clark",
+    "product": "Laptop",
+    "amount": 980,
+    "date": "2023-11-05"
+  },
+  {
+    "id": "tx046",
+    "customerId": "C010",
+    "customerName": "Mia Lewis",
+    "product": "Shoes",
+    "amount": 165,
+    "date": "2023-11-19"
+  },
+  {
+    "id": "tx047",
+    "customerId": "C011",
+    "customerName": "Noah Walker",
+    "product": "Bag",
+    "amount": 135,
+    "date": "2023-12-07"
+  },
+  {
+    "id": "tx048",
+    "customerId": "C012",
+    "customerName": "Isabella Hall",
+    "product": "Dress",
+    "amount": 210,
+    "date": "2023-12-21"
+  },
+  {
+    "id": "tx049",
+    "customerId": "C001",
+    "customerName": "John Miller",
+    "product": "Shoes",
+    "amount": 175,
+    "date": "2024-01-11"
+  },
+  {
+    "id": "tx050",
+    "customerId": "C002",
+    "customerName": "Emma Wilson",
+    "product": "Bag",
+    "amount": 120,
+    "date": "2024-01-24"
+  },
+  {
+    "id": "tx051",
+    "customerId": "C003",
+    "customerName": "David Brown",
+    "product": "Watch",
+    "amount": 320,
+    "date": "2024-02-08"
+  },
+  {
+    "id": "tx052",
+    "customerId": "C004",
+    "customerName": "Sophia Taylor",
+    "product": "Shoes",
+    "amount": 165,
+    "date": "2024-02-22"
+  },
+  {
+    "id": "tx053",
+    "customerId": "C005",
+    "customerName": "Daniel Anderson",
+    "product": "Laptop",
+    "amount": 1400,
+    "date": "2024-03-06"
+  },
+  {
+    "id": "tx054",
+    "customerId": "C006",
+    "customerName": "Olivia Thomas",
+    "product": "Dress",
+    "amount": 195,
+    "date": "2024-03-19"
+  },
+  {
+    "id": "tx055",
+    "customerId": "C007",
+    "customerName": "James Martinez",
+    "product": "Shoes",
+    "amount": 200,
+    "date": "2024-04-03"
+  },
+  {
+    "id": "tx056",
+    "customerId": "C008",
+    "customerName": "Ava Harris",
+    "product": "Bag",
+    "amount": 100,
+    "date": "2024-04-18"
+  },
+  {
+    "id": "tx057",
+    "customerId": "C009",
+    "customerName": "Liam Clark",
+    "product": "Phone",
+    "amount": 720,
+    "date": "2024-05-09"
+  },
+  {
+    "id": "tx058",
+    "customerId": "C010",
+    "customerName": "Mia Lewis",
+    "product": "Shoes",
+    "amount": 185,
+    "date": "2024-05-24"
+  },
+  {
+    "id": "tx059",
+    "customerId": "C011",
+    "customerName": "Noah Walker",
+    "product": "Watch",
+    "amount": 340,
+    "date": "2024-06-13"
+  },
+  {
+    "id": "tx060",
+    "customerId": "C012",
+    "customerName": "Isabella Hall",
+    "product": "Bag",
+    "amount": 125,
+    "date": "2024-06-28"
+  },
+  {
+    "id": "tx061",
+    "customerId": "C001",
+    "customerName": "John Miller",
+    "product": "Shoes",
+    "amount": 195,
+    "date": "2025-01-14"
+  },
+  {
+    "id": "tx062",
+    "customerId": "C002",
+    "customerName": "Emma Wilson",
+    "product": "Dress",
+    "amount": 240,
+    "date": "2025-01-29"
+  },
+  {
+    "id": "tx063",
+    "customerId": "C003",
+    "customerName": "David Brown",
+    "product": "Bag",
+    "amount": 115,
+    "date": "2025-02-11"
+  },
+  {
+    "id": "tx064",
+    "customerId": "C004",
+    "customerName": "Sophia Taylor",
+    "product": "Shoes",
+    "amount": 180,
+    "date": "2025-02-25"
+  },
+  {
+    "id": "tx065",
+    "customerId": "C005",
+    "customerName": "Daniel Anderson",
+    "product": "Laptop",
+    "amount": 1500,
+    "date": "2025-03-08"
+  },
+  {
+    "id": "tx066",
+    "customerId": "C006",
+    "customerName": "Olivia Thomas",
+    "product": "Dress",
+    "amount": 210,
+    "date": "2025-03-21"
+  },
+  {
+    "id": "tx067",
+    "customerId": "C007",
+    "customerName": "James Martinez",
+    "product": "Shoes",
+    "amount": 215,
+    "date": "2025-04-04"
+  },
+  {
+    "id": "tx068",
+    "customerId": "C008",
+    "customerName": "Ava Harris",
+    "product": "Bag",
+    "amount": 130,
+    "date": "2025-04-19"
+  },
+  {
+    "id": "tx069",
+    "customerId": "C009",
+    "customerName": "Liam Clark",
+    "product": "Laptop",
+    "amount": 1050,
+    "date": "2025-05-10"
+  },
+  {
+    "id": "tx070",
+    "customerId": "C010",
+    "customerName": "Mia Lewis",
+    "product": "Shoes",
+    "amount": 190,
+    "date": "2025-05-26"
+  }
+]
