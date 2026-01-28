@@ -1,10 +1,13 @@
+import { logger } from "../utils/logger";
+
 export const fetchTransactions = async () => {
-    const response = await fetch("/transactions.json");
-  
-    if (!response.ok) {
-      throw new Error("Unable to fetch transactions");
-    }
-  
-    return response.json();
-  };
-  
+  logger.info("Fetching transactions from API");
+  const response = await fetch("/transactions.json");
+
+  if (!response.ok) {
+    logger.error("API failed", { status: response.status });
+    throw new Error("Unable to fetch transactions");
+  }
+  logger.info("Transactions fetched successfully");
+  return response.json();
+};
