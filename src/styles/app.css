@@ -1,203 +1,271 @@
+/* ===============================
+   THEME VARIABLES
+================================ */
 
+:root {
+  --primary: #4f46e5;
+  --primary-soft: #eef2ff;
+  --secondary: #06b6d4;
+  --success: #22c55e;
+  --warning: #f59e0b;
+  --danger: #ef4444;
 
-* {
-    box-sizing: border-box;
-  }
-  
-  body {
-    margin: 0;
-    font-family: "Inter", -apple-system, BlinkMacSystemFont,
-      "Segoe UI", Roboto, Arial, sans-serif;
-    background-color: #f5f7fb;
-    color: #1f2937;
-  }
-  
+  --bg: #f5f7fb;
+  --card: #ffffff;
+  --border: #e5e7eb;
 
-  
-  .container {
-    max-width: 1200px;
-    margin: auto;
-    padding: 30px;
-  }
-  
-  h1 {
-    margin-bottom: 30px;
-    font-size: 28px;
-    font-weight: 700;
-  }
-  
-  .section {
-    background: white;
-    border-radius: 12px;
-    padding: 24px;
-    margin-bottom: 30px;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
-  }
-  
-  .section h2 {
-    margin-bottom: 20px;
-    font-size: 20px;
-  }
-  
- 
-  
-  .filters {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-    margin-bottom: 16px;
-  }
-  
-  .filters input {
-    padding: 10px 12px;
-    min-width: 200px;
-    border-radius: 8px;
-    border: 1px solid #e5e7eb;
-    font-size: 14px;
-  }
-  
-  .filters input:focus {
-    outline: none;
-    border-color: #6366f1;
-  }
-  
-  
-  table {
-    width: 100%;
-    border-collapse: separate;
-    border-spacing: 0;
-    overflow: hidden;
-    border-radius: 10px;
-  }
-  
-  thead {
-    background: #f9fafb;
-  }
-  
-  th {
-    padding: 14px;
-    text-align: left;
-    font-size: 13px;
-    font-weight: 600;
-    color: #6b7280;
-    border-bottom: 1px solid #e5e7eb;
-  }
-  
-  td {
-    padding: 14px;
-    border-bottom: 1px solid #f1f1f1;
-    font-size: 14px;
-  }
-  
-  tbody tr:hover {
-    background-color: #f9fbff;
-  }
-  
-  
-  .amount {
-    font-weight: 600;
-  }
-  
-  .points {
-    font-weight: 700;
-    color: #4f46e5;
-  }
-  
-  
-  .pagination {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 20px;
-  }
-  
-  .pagination button {
-    padding: 8px 16px;
-    background: #4f46e5;
-    border: none;
-    border-radius: 6px;
-    color: white;
-    font-weight: 500;
-    cursor: pointer;
-  }
-  
-  .pagination button:disabled {
-    background: #c7c7c7;
-    cursor: not-allowed;
-  }
-  
-  
-  .loader {
-    padding: 80px;
-    text-align: center;
-    font-size: 18px;
-  }
-  
-  
-  .error {
-    padding: 60px;
-    text-align: center;
-    color: #dc2626;
-  }
-  
-  .error button {
-    margin-top: 12px;
-    padding: 8px 16px;
-    background: #dc2626;
-    color: white;
-    border: none;
-    border-radius: 6px;
-  }
-  
-  
-  .empty {
-    text-align: center;
-    padding: 30px;
-    color: #6b7280;
-  }
-  
-  .spinner {
-    width: 45px;
-    height: 45px;
-    border: 4px solid #e5e7eb;
-    border-top: 4px solid #4f46e5;
-    border-radius: 50%;
-    margin: 0 auto 15px;
-    animation: spin 1s linear infinite;
-  }
-  
-  @keyframes spin {
-    to {
-      transform: rotate(360deg);
-    }
-  }
-
-  .table-wrapper {
-    width: 100%;
-    overflow-x: auto;
-  }
-  
-
-
-@media (max-width: 1024px) {
-  .container {
-    padding: 20px;
-  }
-
-  h1 {
-    font-size: 24px;
-  }
-
-  .section {
-    padding: 20px;
-  }
+  --text: #1f2937;
+  --muted: #6b7280;
 }
 
+/* ===============================
+   GLOBAL
+================================ */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Arial, sans-serif;
+  background: linear-gradient(180deg, #f5f7fb 0%, #eef2ff 100%);
+  color: var(--text);
+}
+
+/* ===============================
+   LAYOUT
+================================ */
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 32px;
+}
+
+h1 {
+  margin-bottom: 28px;
+  font-size: 30px;
+  font-weight: 800;
+  background: linear-gradient(
+    90deg,
+    var(--primary),
+    var(--secondary)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.section {
+  background: var(--card);
+  border-radius: 16px;
+  padding: 26px;
+  margin-bottom: 32px;
+  box-shadow:
+    0 12px 30px rgba(79, 70, 229, 0.08),
+    0 2px 6px rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(79, 70, 229, 0.08);
+}
+
+.section h2 {
+  margin-bottom: 18px;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+/* ===============================
+   FILTER BAR
+================================ */
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+.filters input,
+.filters select {
+  padding: 11px 14px;
+  min-width: 190px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  font-size: 14px;
+  background: #fafbff;
+  transition: all 0.2s ease;
+}
+
+.filters input:focus,
+.filters select:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.15);
+}
+
+/* ===============================
+   TABLE
+================================ */
+
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+thead {
+  background: linear-gradient(
+    90deg,
+    #eef2ff,
+    #f0f9ff
+  );
+}
+
+th {
+  padding: 14px 16px;
+  text-align: left;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #4338ca;
+  border-bottom: 1px solid var(--border);
+}
+
+td {
+  padding: 14px 16px;
+  border-bottom: 1px solid #f1f1f1;
+  font-size: 14px;
+}
+
+tbody tr {
+  transition: background 0.15s ease;
+}
+
+tbody tr:hover {
+  background: var(--primary-soft);
+}
+
+/* ===============================
+   DATA HIGHLIGHTS
+================================ */
+
+.amount {
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.points {
+  font-weight: 800;
+  color: var(--primary);
+}
+
+/* ===============================
+   PAGINATION
+================================ */
+
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 22px;
+}
+
+.pagination span {
+  font-weight: 600;
+  color: var(--muted);
+}
+
+.pagination button {
+  padding: 10px 18px;
+  background: linear-gradient(
+    135deg,
+    var(--primary),
+    var(--secondary)
+  );
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.pagination button:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 14px rgba(79, 70, 229, 0.35);
+}
+
+.pagination button:disabled {
+  background: #c7c7c7;
+  cursor: not-allowed;
+}
+
+/* ===============================
+   LOADER
+================================ */
+
+.loader {
+  padding: 90px;
+  text-align: center;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 4px solid #e5e7eb;
+  border-top: 4px solid var(--primary);
+  border-radius: 50%;
+  margin: 0 auto 18px;
+  animation: spin 1s linear infinite;
+}
+
+.loader p {
+  font-weight: 600;
+  color: var(--muted);
+}
+
+/* ===============================
+   ERROR & EMPTY
+================================ */
+
+.error {
+  padding: 60px;
+  text-align: center;
+  color: var(--danger);
+}
+
+.error button {
+  margin-top: 16px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  background: var(--danger);
+  color: white;
+  border: none;
+  font-weight: 600;
+}
+
+.empty {
+  text-align: center;
+  padding: 40px;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+/* ===============================
+   RESPONSIVE
+================================ */
 
 @media (max-width: 768px) {
   .filters {
     flex-direction: column;
-    gap: 10px;
   }
 
   .filters input,
@@ -205,25 +273,9 @@
     width: 100%;
   }
 
-  table {
-    display: block;
-    overflow-x: auto;
-    white-space: nowrap;
-  }
-
-  th,
-  td {
-    padding: 10px;
-    font-size: 13px;
-  }
-
-  h1 {
-    font-size: 22px;
-  }
-
   .pagination {
     flex-direction: column;
-    gap: 10px;
+    gap: 12px;
   }
 
   .pagination button {
@@ -231,19 +283,8 @@
   }
 }
 
-
-@media (max-width: 480px) {
-  h1 {
-    font-size: 20px;
-  }
-
-  .section h2 {
-    font-size: 16px;
-  }
-
-  th,
-  td {
-    padding: 8px;
-    font-size: 12px;
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
   }
 }
